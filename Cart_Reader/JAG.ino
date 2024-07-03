@@ -21,6 +21,7 @@
 // OLED Library:  https://github.com/adafruit/Adafruit_SSD1306
 //******************************************************************************
 #define OLED // OLED Display [COMMENT OUT FOR SERIAL OUTPUT]
+#define EnableSerialDebug // additiaon serial monitor output [COMMENT OUT to disable]
 //******************************************************************************
 
 // RGB LED COMMON ANODE
@@ -869,10 +870,11 @@ void setup() {
   display.drawBitmap(0, 10, jaglogo, 128, 44, 1);
   display.display();
   delay(1000);
-#else
+#endif
+#ifdef EnableSerialDebug 
   Serial.begin(9600);
-  println_Msg(F("Jaguar Dumper"));
-  println_Msg(F("2024 skaman"));
+  Serial.println("Jaguar Dumper");
+  Serial.println("2024 skaman");
 #endif
   InitSD();
 #ifndef OLED
@@ -1141,8 +1143,17 @@ boolean compareCRC(const char* database, uint32_t crc32sum, boolean renamerom) {
       get_line(crc_search, &myFile, sizeof(crc_search));
       skip_line(&myFile);  //Skip every 3rd line
 
+      #ifdef EnableSerialDebug 
+        Serial.print("comparing game crc: '");
+        Serial.print(crcStr);
+        Serial.print("' to db crc: '");
+        Serial.print(crc_search);
+        Serial.print("' DB game Name: ");
+        Serial.println(gamename);
+      #endif
+
       //if checksum search successful, rename the file and end search
-      if (strcmp(crc_search, crcStr) == 0) {
+      if (strcasecmp(crc_search, crcStr) == 0) {
         // Close the file:
         myFile.close();
         matchFound = true;
@@ -1150,6 +1161,14 @@ boolean compareCRC(const char* database, uint32_t crc32sum, boolean renamerom) {
       }
     }
     if (matchFound) {
+        #ifdef EnableSerialDebug 
+          Serial.print("MATCH FOUND game crc: '");
+          Serial.print(crcStr);
+          Serial.print("' to db crc: '");
+          Serial.print(crc_search);
+          Serial.print("' DB game Name: ");
+          Serial.println(gamename);
+        #endif      
         print_Msg(F("Match Found -> "));
         display_Update();
 
@@ -1169,6 +1188,11 @@ boolean compareCRC(const char* database, uint32_t crc32sum, boolean renamerom) {
         }
         return 1;
     } else {
+      #ifdef EnableSerialDebug 
+        Serial.print("MATCH NOT FOUND game crc: '");
+        Serial.print(crcStr);
+        Serial.println("'");
+      #endif       
       println_Msg(F("Match NOT Not found"));
       return 0;
     }

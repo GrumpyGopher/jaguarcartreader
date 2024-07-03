@@ -1,4 +1,4 @@
-Test[BIOS] Atari Jaguar (World).j64
+[BIOS] Atari Jaguar (World).j64
 FB731AAA
 
 [BIOS] Atari Jaguar CD (World).j64

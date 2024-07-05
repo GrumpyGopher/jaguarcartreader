@@ -21,6 +21,7 @@
 // OLED Library:  https://github.com/adafruit/Adafruit_SSD1306
 //******************************************************************************
 #define OLED // OLED Display [COMMENT OUT FOR SERIAL OUTPUT]
+//#define EnableSerialDebug // additiaon serial monitor output [COMMENT OUT to disable]
 //******************************************************************************
 
 // RGB LED COMMON ANODE
@@ -304,8 +305,18 @@ int checkButton() {
 
 void wait() {
   while (1) {
+    #ifdef EnableSerialDebug
+      if (Serial.available()) {
+        while (Serial.available() > 0) {
+          char discardChar = Serial.read();
+          delay(100);
+        }
+        break;
+      }
+    #endif      
     b = checkButton();
     if ((b == press) || (b == hold)) {
+      debug_println(F(""));
       break;
     }
   }
@@ -351,7 +362,20 @@ void convertPgm(const char* const pgmOptions[], byte numArrays) {
 // MAIN MENU
 //******************************************************************************
 void menu() {
-#ifdef OLED
+#ifdef EnableSerialDebug
+  Serial.println(F("COMMANDS:"));
+  Serial.println(F("(0) Read ROM"));
+  Serial.println(F("(1) Set ROM Size"));
+  Serial.println(F("(2) Read EEPROM"));
+  Serial.println(F("(3) Set EEPROM Size"));
+  Serial.println(F("(4) Write EEPROM"));
+  Serial.println(F("(5) Read MEMORY TRACK"));
+  Serial.println(F("(6) Write FLASH"));
+  Serial.println(F("(7) Display EEPROM"));
+  Serial.println(F("(8) Erase EEPROM"));
+  Serial.println("");
+  Serial.print("Enter Command: ");
+#endif
   // create menu with title " JAGUAR CART READER" and 7 options to choose from
   convertPgm(baseMenu, 7);
   unsigned char answer = menu_box(" JAGUAR CART READER", menuChoices, 7, 0);
@@ -361,6 +385,7 @@ void menu() {
     // Read ROM
     case 0:
       clear();
+      debug_println(F("0 (Read ROM)\n"));
       // Change working dir to root
       sd.chdir("/");
       readROM();
@@ -368,6 +393,7 @@ void menu() {
 
     // Set ROM Size
     case 1:
+      debug_println(F("1 (Set Size)\n"));
       sizeMenu();
       getCartInfo();
       break;
@@ -375,22 +401,25 @@ void menu() {
     // Read EEPROM
     case 2:
       clear();
+      debug_println(F("2 (Read EEPROM)\n"));
       if (saveType == 0)
         readEEP();
       else {
         println_Msg(F("Cart has no EEPROM"));
-        display.display();
+        display_Update();
       }
       break;
 
     // Set EEPROM Size
     case 3:
+      debug_println(F("3 (Set EEPROM Size)\n"));
       eepMenu();
       getCartInfo();
       break;
 
     // Write EEPROM
     case 4:
+      debug_println(F("4 (Write EEPROM)\n"));
       if (saveType == 0) {
         // Launch file browser
         SelectFileInSD();
@@ -399,12 +428,13 @@ void menu() {
       }
       else {
         println_Msg(F("Cart has no EEPROM"));
-        display.display();
+        display_Update();
       }
       break;
 
     // Read MEMORY TRACK
     case 5:
+      debug_println(F("5 (Read MEMORY TRACK)\n"));
       readMEMORY();
       if (saveType == 1)
         readFLASH();
@@ -417,6 +447,7 @@ void menu() {
     // Write FLASH
     case 6:
       clear();
+      debug_println(F("6 (Write FLASH)\n"));
       if (saveType == 1) {
         // Launch file browser
         SelectFileInSD();
@@ -429,275 +460,133 @@ void menu() {
         display.display();
       }
       break;
-  }
-#else
-  // Print menu to serial monitor
-  println_Msg(F("COMMANDS:"));
-  println_Msg(F("(0) Read ROM"));
-  println_Msg(F("(1) Set ROM Size"));
-  println_Msg(F("(2) Read EEPROM"));
-  println_Msg(F("(3) Set EEPROM Size"));
-  println_Msg(F("(4) Write EEPROM"));
-  println_Msg(F("(5) Read MEMORY TRACK"));
-  println_Msg(F("(6) Write FLASH"));
-  println_Msg(F("(7) Display EEPROM"));
-  println_Msg(F("(8) Erase EEPROM"));
-  println_Msg("");
-  print_Msg("Enter Command: ");
-  while (Serial.available() == 0) {}
-  serialinput = Serial.read();
-//  println_Msg(serialinput);
-//  println_Msg("");
-  switch (serialinput) {
-    case 0x30: //0
-      println_Msg(F("0 (Read ROM)"));
-      // Change working dir to root
-      sd.chdir("/");
-      readROM();
-      break;
 
-    case 0x31: //1
-      println_Msg(F("1 (Set Size)"));
-      sizeMenu();
-      getCartInfo();
-      break;
-
-    case 0x32: //2
-      println_Msg(F("2 (Read EEPROM)"));
-      if (saveType == 0)
-        readEEP();
-      else {
-        println_Msg(F("Cart has no EEPROM"));
-        println_Msg(F(""));
-      }
-      break;
-
-    case 0x33: //3
-      println_Msg(F("3 (Set EEPROM Size)"));
-      eepMenu();
-      getCartInfo();
-      break;
-
-    case 0x34: //4
-      println_Msg(F("4 (Write EEPROM)"));
-      if (saveType == 0) {
-        // Launch file browser
-        SelectFileInSD();
-        writeEEP();
-      }
-      else {
-        println_Msg(F("Cart has no EEPROM"));
-        println_Msg(F(""));
-      }
-      break;
-
-    case 0x35: //5
-      println_Msg(F("5 (Read MEMORY TRACK)"));
-      readMEMORY();
-      if (saveType == 1)
-        readFLASH();
-      else {
-        println_Msg(F("Cart has no FLASH"));
-        println_Msg(F(""));
-      }
-      break;
-
-    case 0x36: //6
-      println_Msg(F("6 (Write FLASH)"));
-      if (saveType == 1) {
-        // Launch file browser
-        SelectFileInSD();
-        writeFLASH();
-        verifyFLASH();
-      }
-      else {
-        println_Msg(F("Cart has no FLASH"));
-        println_Msg(F(""));
-      }
-      break;
-
-    case 0x37: //7
-      println_Msg(F("7 (Display EEPROM)"));
+    case 7:
+      debug_println(F("7 (Display EEPROM)\n"));
       if (saveType == 0)
         EepromDisplay();
       else {
-        println_Msg(F("Cart has no EEPROM"));
-        println_Msg(F(""));
+        Serial.println(F("Cart has no EEPROM"));
+        Serial.println(F(""));
       }
       break;
 
-    case 0x38: //8
-      println_Msg(F("8 (Erase EEPROM)"));
+    case 8:
+      debug_println(F("8 (Erase EEPROM)\n"));
       if (saveType == 0) {
         EepromEWEN();
         EepromERAL();
         EepromEWDS();
-        println_Msg(F(""));
+        Serial.println(F(""));
       }
       else {
-        println_Msg(F("Cart has no EEPROM"));
-        println_Msg(F(""));
+        Serial.println(F("Cart has no EEPROM"));
+        Serial.println(F(""));
       }
       break;
   }
-#endif
 }
 
 //******************************************************************************
 // ROM SIZE MENU
 //******************************************************************************
 void sizeMenu() {
-#ifdef OLED
+#ifdef EnableSerialDebug
+  Serial.println(F("Select Size:"));
+  Serial.println(F("(0) 1MB ROM"));
+  Serial.println(F("(1) 2MB ROM"));
+  Serial.println(F("(2) 4MB ROM"));
+  Serial.println("");
+  Serial.print("Enter Command: ");
+#endif
   convertPgm(romMenu, 3);
   unsigned char subMenu = menu_box("Select ROM Size", menuChoices, 3, 0);
 
   switch (subMenu) {
     case 0:
+      debug_println(F("0 (1MB ROM)"));
       romSize = 0;
       EEPROM_writeAnything(8, romSize);
       cartSize = 0x100000;
+      debug_println(F(""));
       break;
 
     case 1:
+      debug_println(F("1 (2MB ROM)"));
       romSize = 1;
       EEPROM_writeAnything(8, romSize);
       cartSize = 0x200000;
+      debug_println(F(""));
       break;
 
     case 2:
+      debug_println(F("2 (4MB ROM)"));
       romSize = 2;
       EEPROM_writeAnything(8, romSize);
       cartSize = 0x400000;
+      debug_println(F(""));
       break;
   }
-#else
-  println_Msg(F("Select Size:"));
-  println_Msg(F("(0) 1MB ROM"));
-  println_Msg(F("(1) 2MB ROM"));
-  println_Msg(F("(2) 4MB ROM"));
-  println_Msg("");
-  print_Msg("Enter Command: ");
-  while (Serial.available() == 0) {}
-  serialinput = Serial.read();
-
-  switch (serialinput) {
-    case 0x30: //0
-      println_Msg(F("0 (1MB ROM)"));
-      romSize = 0;
-      EEPROM_writeAnything(8, romSize);
-      cartSize = 0x100000;
-      break;
-
-    case 0x31: //1
-      println_Msg(F("1 (2MB ROM)"));
-      romSize = 1;
-      EEPROM_writeAnything(8, romSize);
-      cartSize = 0x200000;
-      break;
-
-    case 0x32: //2
-      println_Msg(F("2 (4MB ROM)"));
-      romSize = 2;
-      EEPROM_writeAnything(8, romSize);
-      cartSize = 0x400000;
-      break;
-  }
-#endif
 }
 
 //******************************************************************************
 // EEPROM SIZE MENU
 //******************************************************************************
 void eepMenu() {
-#ifdef OLED
+#ifdef EnableSerialDebug
+  Serial.println(F("Select Size:"));
+  Serial.println(F("(0) 128B"));
+  Serial.println(F("(1) 256B"));
+  Serial.println(F("(2) 512B"));
+  Serial.println(F("(3) 1024B"));
+  Serial.println(F("(4) 2048B"));
+  Serial.println("");
+  Serial.print("Enter Command: ");
+#endif
   convertPgm(saveMenu, 5);
   unsigned char subMenu = menu_box("Select EEPROM Size", menuChoices, 5, 0);
 
   switch (subMenu) {
     case 0:
+      debug_println(F("0 (128B EEPROM)"));
       eepSize = 0; // 128B
       EEPROM_writeAnything(10, eepSize);
       println_Msg(F("128B (93C46)"));
-      display.display();
+      display_Update();
       break;
 
     case 1:
+      debug_println(F("1 (256B EEPROM)"));
       eepSize = 1; // 256B
       EEPROM_writeAnything(10, eepSize);
       println_Msg(F("256B (93C56)"));
-      display.display();
+      display_Update();
       break;
 
     case 2:
+      debug_println(F("2 (512B EEPROM)"));
       eepSize = 2; // 512B
       EEPROM_writeAnything(10, eepSize);
       println_Msg(F("512B (93C66)"));
-      display.display();
+      display_Update();
       break;
 
     case 3:
+      debug_println(F("3 (1024B EEPROM)"));
       eepSize = 3; // 1024B
       EEPROM_writeAnything(10, eepSize);
       println_Msg(F("1024B (93C76)"));
-      display.display();
+      display_Update();
       break;
 
     case 4:
+      debug_println(F("4 (2048B EEPROM)"));
       eepSize = 4; // 2048B
       EEPROM_writeAnything(10, eepSize);
       println_Msg(F("2048B (93C86)"));
-      display.display();
+      display_Update();
       break;
   }
-#else
-  println_Msg(F("Select Size:"));
-  println_Msg(F("(0) 128B"));
-  println_Msg(F("(1) 256B"));
-  println_Msg(F("(2) 512B"));
-  println_Msg(F("(3) 1024B"));
-  println_Msg(F("(4) 2048B"));
-  println_Msg("");
-  print_Msg("Enter Command: ");
-  while (Serial.available() == 0) {}
-  serialinput = Serial.read();
-
-  switch (serialinput) {
-    case 0x30: //0
-      println_Msg(F("0 (128B EEPROM)"));
-      eepSize = 0;
-      EEPROM_writeAnything(10, eepSize);
-      println_Msg(F("128B (93C46)"));
-      break;
-
-    case 0x31: //1
-      println_Msg(F("1 (256B EEPROM)"));
-      eepSize = 1;
-      EEPROM_writeAnything(10, eepSize);
-      println_Msg(F("256B (93C56)"));
-      break;
-
-    case 0x32: //2
-      println_Msg(F("2 (512B EEPROM)"));
-      eepSize = 2;
-      EEPROM_writeAnything(10, eepSize);
-      println_Msg(F("512B (93C66)"));
-      break;
-
-    case 0x33: //3
-      println_Msg(F("3 (1024B EEPROM)"));
-      eepSize = 3;
-      EEPROM_writeAnything(10, eepSize);
-      println_Msg(F("1024B (93C76)"));
-      break;
-
-    case 0x34: //4
-      println_Msg(F("4 (2048B EEPROM)"));
-      eepSize = 4;
-      EEPROM_writeAnything(10, eepSize);
-      println_Msg(F("2048B (93C86)"));
-      break;
-  }
-#endif
 }
 
 //******************************************************************************
@@ -794,7 +683,7 @@ uint32_t calcCRC(char* checkFile, unsigned long filesize) {
   else
     crc = crc32(crcFile, filesize);
   crcFile.close();
-  sprintf(tempCRC, "%08lX", crc);
+  uint32ToHexStr(crc, tempCRC, sizeof(tempCRC));
   print_Msg(F("CRC: "));
   println_Msg(tempCRC);
   display_Update();
@@ -869,20 +758,21 @@ void setup() {
   display.drawBitmap(0, 10, jaglogo, 128, 44, 1);
   display.display();
   delay(1000);
-#else
+#endif
+#ifdef EnableSerialDebug
   Serial.begin(9600);
-  println_Msg(F("Jaguar Dumper"));
-  println_Msg(F("2024 skaman"));
+  Serial.println(F("Jaguar Dumper"));
+  Serial.println(F("2024 skaman"));
+  Serial.println("");
 #endif
   InitSD();
-#ifndef OLED
+
   // Print SD Info
   print_Msg(F("SD Card: "));
   print_Msg(sd.card()->cardSize() * 512E-9);
   print_Msg(F("GB FAT"));
   println_Msg(int(sd.vol()->fatType()));
   println_Msg(F(""));
-#endif
 
   EEPROM_readAnything(8, romSize);
   EEPROM_readAnything(10, eepSize);
@@ -939,10 +829,12 @@ void getCartInfo() {
     println_Msg(F(" KB"));
   }
   display_Update();
+  debug_println(F(""));
 
 #ifdef OLED
     display.setCursor(0, 56);
-    println_Msg(F("Press Button..."));
+    display.println(F("Press Button..."));
+    debug_println(F("Send any character to continue...\n"));
     display.display();
     wait();
 #endif
@@ -1114,7 +1006,8 @@ void readROM() {
 
 #ifdef OLED
   display.setCursor(0, 56);
-  println_Msg(F("Press Button..."));
+  display.println(F("Press Button..."));
+  debug_println(F("Send any character to continue...\n"));
   display_Update();
   wait();
 #endif
@@ -1124,7 +1017,7 @@ void readROM() {
 boolean compareCRC(const char* database, uint32_t crc32sum, boolean renamerom) {
   char crcStr[9];
   // Convert precalculated crc to string
-  sprintf(crcStr, "%08lX", crc32sum);
+  uint32ToHexStr(crc32sum, crcStr, sizeof(crcStr));
 
   //Search for CRC32 in file
   char gamename[96];
@@ -1141,8 +1034,17 @@ boolean compareCRC(const char* database, uint32_t crc32sum, boolean renamerom) {
       get_line(crc_search, &myFile, sizeof(crc_search));
       skip_line(&myFile);  //Skip every 3rd line
 
+      #ifdef EnableSerialDebug 
+        Serial.print("comparing game crc: '");
+        Serial.print(crcStr);
+        Serial.print("' to db crc: '");
+        Serial.print(crc_search);
+        Serial.print("' DB game Name: ");
+        Serial.println(gamename);
+      #endif      
+
       //if checksum search successful, rename the file and end search
-      if (strcmp(crc_search, crcStr) == 0) {
+      if (strcasecmp(crc_search, crcStr) == 0) {
         // Close the file:
         myFile.close();
         matchFound = true;
@@ -1167,15 +1069,26 @@ boolean compareCRC(const char* database, uint32_t crc32sum, boolean renamerom) {
         } else {
           println_Msg("OK");
         }
+        debug_println(F(""));
         return 1;
     } else {
-      println_Msg(F("Match NOT Not found"));
+      println_Msg(F("Match NOT Not found\n"));
       return 0;
     }
   } else {
-    println_Msg(F(" -> Error Database missing"));
+    println_Msg(F(" -> Error Database missing\n"));
     return 0;
   }
+}
+
+void uint32ToHexStr(uint32_t num, char* str, size_t strSize) {
+  if (strSize < 9) return; // Ensure buffer is large enough
+  for (int i = 7; i >= 0; i--) {
+    uint8_t nibble = num & 0xF;
+    str[i] = nibble < 10 ? '0' + nibble : 'A' + (nibble - 10);
+    num >>= 4;
+  }
+  str[8] = '\0'; // Null-terminate the string
 }
 
 //Skip line
@@ -1876,7 +1789,8 @@ void readMEMORY() {
 
 #ifdef OLED
   display.setCursor(0, 56);
-  println_Msg(F("Press Button..."));
+  display.println(F("Press Button..."));
+  debug_println(F("Send any character to continue...\n"));
   display_Update();
   wait();
 #endif
@@ -1951,7 +1865,8 @@ void readFLASH() {
 
 #ifdef OLED
   display.setCursor(0, 56);
-  println_Msg(F("Press Button..."));
+  display.println(F("Press Button..."));
+  debug_println(F("Send any character to continue...\n"));
   display_Update();
   wait();
 #endif
@@ -2039,7 +1954,8 @@ unsigned long verifyFLASH() {
   display_Update();
 #ifdef OLED
   display.setCursor(0, 56);
-  println_Msg(F("Press Button..."));
+  display.println(F("Press Button..."));
+  debug_println(F("Send any character to continue...\n"));
   display_Update();
   wait();
 #endif
@@ -2053,7 +1969,8 @@ unsigned long verifyFLASH() {
 void print_Msg(const __FlashStringHelper *string) {
 #ifdef OLED
   display.print(string);
-#else
+#endif
+#ifdef EnableSerialDebug
   Serial.print(string);
 #endif
 }
@@ -2061,7 +1978,8 @@ void print_Msg(const __FlashStringHelper *string) {
 void print_Msg(const char string[]) {
 #ifdef OLED
   display.print(string);
-#else
+#endif
+#ifdef EnableSerialDebug
   Serial.print(string);
 #endif
 }
@@ -2069,7 +1987,8 @@ void print_Msg(const char string[]) {
 void print_Msg(long unsigned int message) {
 #ifdef OLED
   display.print(message);
-#else
+#endif
+#ifdef EnableSerialDebug
   Serial.print(message);
 #endif
 }
@@ -2077,7 +1996,8 @@ void print_Msg(long unsigned int message) {
 void print_Msg(byte message, int outputFormat) {
 #ifdef OLED
   display.print(message, outputFormat);
-#else
+#endif
+#ifdef EnableSerialDebug
   Serial.print(message, outputFormat);
 #endif
 }
@@ -2085,7 +2005,8 @@ void print_Msg(byte message, int outputFormat) {
 void print_Msg(String string) {
 #ifdef OLED
   display.print(string);
-#else
+#endif
+#ifdef EnableSerialDebug
   Serial.print(string);
 #endif
 }
@@ -2093,7 +2014,8 @@ void print_Msg(String string) {
 void println_Msg(String string) {
 #ifdef OLED
   display.println(string);
-#else
+#endif
+#ifdef EnableSerialDebug
   Serial.println(string);
 #endif
 }
@@ -2101,7 +2023,8 @@ void println_Msg(String string) {
 void println_Msg(byte message, int outputFormat) {
 #ifdef OLED
   display.println(message, outputFormat);
-#else
+#endif
+#ifdef EnableSerialDebug
   Serial.println(message, outputFormat);
 #endif
 }
@@ -2109,15 +2032,23 @@ void println_Msg(byte message, int outputFormat) {
 void println_Msg(const char message[]) {
 #ifdef OLED
   display.println(message);
-#else
+#endif
+#ifdef EnableSerialDebug
   Serial.println(message);
+#endif
+}
+
+void debug_println(const __FlashStringHelper *string) {
+#ifdef EnableSerialDebug
+  Serial.println(string);
 #endif
 }
 
 void println_Msg(const __FlashStringHelper *string) {
 #ifdef OLED
   display.println(string);
-#else
+#endif
+#ifdef EnableSerialDebug
   Serial.println(string);
 #endif
 }
@@ -2125,7 +2056,8 @@ void println_Msg(const __FlashStringHelper *string) {
 void println_Msg(long unsigned int message) {
 #ifdef OLED
   display.println(message);
-#else
+#endif
+#ifdef EnableSerialDebug
   Serial.println(message);
 #endif
 }
@@ -2133,15 +2065,14 @@ void println_Msg(long unsigned int message) {
 void display_Update() {
 #ifdef OLED
   display.display();
-#else
-  Serial.println(F(""));
-  delay(100);
 #endif
 }
 
 void clear() {
+#ifdef OLED
   display.clearDisplay();
   display.setCursor(0,0);
+#endif
 }
 
 //******************************************************************************
@@ -2294,45 +2225,62 @@ unsigned char browser_box(char* question, char answers[7][20], int num_answers, 
 unsigned char menu_box(const char* selection, char menu_answers[8][20], int menu_count, int menu_default) {
   clear();
   // print menu
-  println_Msg(selection);
+#ifdef OLED  
+  display.println(selection);
   for (unsigned char i = 0; i < menu_count; i++) {
     // Add space for the selection dot
-    print_Msg(" ");
+    display.print(" ");
     // Print menu item
-    println_Msg(menu_answers[i]);
+    display.println(menu_answers[i]);
   }
   display.display();
+#endif
   // start with the default choice
   menu_choice = menu_default;
+#ifdef OLED    
   // draw selection box
   display.drawPixel(0, 8 * menu_choice + 12, WHITE);
   display.display();
+#endif  
   // wait until user makes his choice
   while (1) {
-    b = checkButton();
-    if (b == doubleclick) { // Previous
-      // remove selection box
-      display.drawPixel(0, 8 * menu_choice + 12, BLACK);
-      display.display();
-      if (menu_choice == 0)
-        menu_choice = menu_count - 1;
-      else
-        menu_choice--;
-      // draw selection box
-      display.drawPixel(0, 8 * menu_choice + 12, WHITE);
-      display.display();
-    }
-    if (b == press) { // Next
-      // remove selection box
-      display.drawPixel(0, 8 * menu_choice + 12, BLACK);
-      display.display();
-      menu_choice = (menu_choice + 1) % menu_count;
-      // draw selection box
-      display.drawPixel(0, 8 * menu_choice + 12, WHITE);
-      display.display();
-    }
-    if (b == hold) // Execute
-      break;
+    #ifdef EnableSerialDebug
+      if (Serial.available()) {
+        serialinput = Serial.read() - 48;
+        delay(100);
+        while (Serial.available()) {
+          char discardChar = Serial.read();
+          delay(100);
+        }
+        return serialinput;
+      }
+    #endif
+    #ifdef OLED
+      b = checkButton();
+      if (b == doubleclick) { // Previous
+        // remove selection box
+        display.drawPixel(0, 8 * menu_choice + 12, BLACK);
+        display.display();
+        if (menu_choice == 0)
+          menu_choice = menu_count - 1;
+        else
+          menu_choice--;
+        // draw selection box
+        display.drawPixel(0, 8 * menu_choice + 12, WHITE);
+        display.display();
+      }
+      if (b == press) { // Next
+        // remove selection box
+        display.drawPixel(0, 8 * menu_choice + 12, BLACK);
+        display.display();
+        menu_choice = (menu_choice + 1) % menu_count;
+        // draw selection box
+        display.drawPixel(0, 8 * menu_choice + 12, WHITE);
+        display.display();
+      }
+      if (b == hold) // Execute
+        break;
+    #endif
   }
   return menu_choice;
 }

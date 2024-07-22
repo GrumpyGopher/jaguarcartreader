@@ -28,6 +28,9 @@ B4E7BC59
 Alien vs Predator (World) (v0.93) (Beta) (1994-04-08).j64
 E65DA590
 
+AstroStorm (World) (Aftermarket) (Unl).j64
+FB0F685E
+
 Atari Karts (World).j64
 E28756DE
 
@@ -154,6 +157,9 @@ BE5E9EF1
 Jaguar Hockey Legends 2013 (World) (Unl).j64
 7E90046E
 
+Jeff Minter Classics (World) (Aftermarket) (Unl).j64
+05BF2157
+
 Kasumi Ninja (World).j64
 0957A072
 
@@ -202,6 +208,9 @@ Rayman (World) (Beta 2).j64
 Rayman (World) (Beta 1).j64
 92743C49
 
+Rebooteroids (World) (Aftermarket) (Unl).j64
+FF43A74F
+
 Ruiner Pinball (USA, Europe).j64
 5B6BB205
 
@@ -211,11 +220,17 @@ SkyCopter II (USA) (Proto).j64
 Speedster II (USA) (Proto).j64
 F7CFE6E6
 
+Stormbringer (World) (Aftermarket) (Unl).j64
+5AE29FEE
+
 Super Burnout (World).j64
 6F8B2547
 
 Supercross 3D (USA, Europe).j64
 EC22F572
+
+Switchblade (World) (Aftermarket) (Unl).j64
+EACD9959
 
 Syndicate (World).j64
 58272540

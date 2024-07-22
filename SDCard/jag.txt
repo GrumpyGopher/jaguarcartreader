@@ -70,6 +70,9 @@ Assassin, The (World) (Demo 1) (Aftermarket) (Unl).j64
 Asteroids (World) (Aftermarket) (Unl).j64
 684E16A1
 
+AstroStorm (World) (Aftermarket) (Unl).j64
+FB0F685E
+
 AstroStorm (World) (v1.43) (Digital) (Aftermarket) (Unl).j64
 E84C8666
 
@@ -463,6 +466,9 @@ JagZombies (World) (2017-11-11) (Demo) (Aftermarket) (Unl).j64
 Jalaga (World) (GemTos 2023) (Aftermarket) (Unl).j64
 C8C942A3
 
+Jeff Minter Classics (World) (Aftermarket) (Unl).j64
+05BF2157
+
 Jet Set Willy (World) (Aftermarket) (Unl).j64
 80DF77CF
 
@@ -622,6 +628,9 @@ Rayman (World) (Beta 2).j64
 Rayman (World) (Beta 1).j64
 92743C49
 
+Rebooteroids (World) (Aftermarket) (Unl).j64
+FF43A74F
+
 Rebooteroids (World) (RC1.1) (Aftermarket) (Unl).j64
 E86A1088
 
@@ -715,6 +724,9 @@ DC8E36FA
 STNICCC 2000 (2nd) (World) (2022-05-31) (Demo) (Aftermarket) (Unl).j64
 809AFEB5
 
+Stormbringer (World) (Aftermarket) (Unl).j64
+5AE29FEE
+
 Strider (World) (Aftermarket) (Unl).j64
 4ED753F3
 
@@ -726,6 +738,9 @@ Super Burnout (World).j64
 
 Supercross 3D (USA, Europe).j64
 EC22F572
+
+Switchblade (World) (Aftermarket) (Unl).j64
+EACD9959
 
 SuperFly DX (World) (v1.1) (Aftermarket) (Unl).j64
 504C1D73

@@ -13,8 +13,32 @@ E60277BB
 [BIOS] Atari Jaguar Stubulator '94 (World).j64
 8D15DBC6
 
+1943 (World) (Aftermarket) (Unl).j64
+ED88E869
+
+2048 (World) (Aftermarket) (Unl).j64
+ED66D83E
+
+Abbaye des Morts, L' (World) (Demo) (Aftermarket) (Unl).j64
+C03E2031
+
+Abyss (World) (v0.74) (Proto) (Aftermarket) (Unl).j64
+495A2085
+
+Action Fighter (World) (Aftermarket) (Unl).j64
+9203A13D
+
+Aircars (World) (Aftermarket) (Unl).j64
+40E1A1D0
+
 Aircars (USA) (Beta) (1994-11-14).j64
 53E35744
+
+Alice's Mom's Rescue (World) (En,Fr,De,Es,It) (Aftermarket) (Unl).j64
+419D26F0
+
+Alien Syndrome (World) (Aftermarket) (Unl).j64
+42B4C7FD
 
 Alien vs Predator (World).j64
 DC187F82
@@ -28,17 +52,110 @@ B4E7BC59
 Alien vs Predator (World) (v0.93) (Beta) (1994-04-08).j64
 E65DA590
 
+Arena Football '95 (World) (Aftermarket) (Unl).j64
+199B9D83
+
+Arkanna (World) (Demo) (Aftermarket) (Unl).j64
+8F6474AA
+
+Arkanoid - Revenge of DoH (World) (Aftermarket) (Unl).j64
+B08D343D
+
+Assassin, The (World) (Demo 2) (Aftermarket) (Unl).j64
+843F1D84
+
+Assassin, The (World) (Demo 1) (Aftermarket) (Unl).j64
+33A1CF52
+
+Asteroids (World) (Aftermarket) (Unl).j64
+684E16A1
+
+AstroStorm (World) (v1.43) (Digital) (Aftermarket) (Unl).j64
+E84C8666
+
 Atari Karts (World).j64
 E28756DE
 
 Atari Karts (World) (Beta).j64
 52C996E0
 
+Atomic (World) (Aftermarket) (Unl).j64
+F0DA5ECA
+
+Atomic Reloaded (World) (Aftermarket) (Unl).j64
+FF38C49E
+
 Attack of the Mutant Penguins (World).j64
 CD5BF827
 
+Bad Apple (World) (Monochrome Version) (Aftermarket) (Unl).j64
+4C668398
+
+Bad Apple (World) (Color Version) (Aftermarket) (Unl).j64
+C7F71D13
+
+Badlands (World) (Aftermarket) (Unl).j64
+F503B4EE
+
+Barbarian (World) (AMIGA) (Aftermarket) (Unl).j64
+DEF4B8D3
+
+Barbarian (World) (Atari ST) (Aftermarket) (Unl).j64
+2D84A3BF
+
+Barkley Shut Up and Jam (World) (Aftermarket) (Unl).j64
+AEA9D831
+
 Barkley Shut Up and Jam (USA) (Beta).j64
 3A3B1FD2
+
+Battle Sphere (World) (Aftermarket) (Unl).j64
+5F2C2774
+
+Battle Sphere Gold (World) (Aftermarket) (Unl).j64
+67F9AB3A
+
+Beach Volley (World) (Aftermarket) (Unl).j64
+644B64E3
+
+Beast Busters (World) (Aftermarket) (Unl).j64
+FE61553E
+
+Beebris (World) (Aftermarket) (Unl).j64
+A84955BA
+
+Bionic Commando (World) (Aftermarket) (Unl).j64
+EB007AD4
+
+Biopede (World) (v1.3) (Aftermarket) (Unl).j64
+FDBA1EEA
+
+Black Jag - Hyper Power League (World) (v1.03) (Demo) (Aftermarket) (Unl).j64
+D8DD7787
+
+Black Jag - Hyper Power League (World) (v1.01) (Demo) (Aftermarket) (Unl).j64
+221F6A25
+
+Black Jag - Hyper Power League (World) (v1.02) (Demo) (Aftermarket) (Unl).j64
+9B6FE171
+
+Black Lamp (World) (Aftermarket) (Unl).j64
+8FBED449
+
+Blackhole (World) (Proto) (Aftermarket) (Unl).j64
+189647A1
+
+Block'em Sock'em (World) (Digital) (Aftermarket) (Unl).j64
+5C93E851
+
+Boingy (World) (Demo 3) (Aftermarket) (Unl).j64
+D79A5C86
+
+Boingy (World) (Demo 2) (Aftermarket) (Unl).j64
+B87618C3
+
+Boingy (World) (Demo 1) (Aftermarket) (Unl).j64
+C74FDFF9
 
 Breakout 2000 (USA, Europe).j64
 B5604D40
@@ -46,11 +163,20 @@ B5604D40
 Breakout 2000 (USA, Europe) (Beta).j64
 20DBFF9F
 
+Brett Hull Hockey (World) (Aftermarket) (Unl).j64
+91095DD3
+
 Brutal Sports Football (World).j64
 BCB1A4BF
 
+Bubble Bobble (World) (Aftermarket) (Unl).j64
+639B4E10
+
 Bubsy in Fractured Furry Tales (World).j64
 2E17D5DA
+
+Burger Time (World) (Demo) (Aftermarket) (Unl).j64
+25D2750B
 
 Burn Out (World) (Demo 2) (WCES 1995).j64
 0F698FB3
@@ -61,11 +187,20 @@ Burn Out (World) (Demo 1).j64
 Cannon Fodder (World).j64
 BDA405C6
 
+Caribean Tavern (World) (Proto) (GemTos 2023) (Aftermarket).j64
+505CE566
+
 Checkered Flag (World).j64
 FA7775AE
 
 Checkered Flag (World) (Beta) (CES 1993).j64
 CE94C0D5
+
+Classic Kong Complete (World) (Aftermarket) (Unl).j64
+2584FE62
+
+Clicks! (World) (Aftermarket) (Unl).j64
+FC39D15D
 
 Club Drive (World).j64
 EEE8D61D
@@ -82,17 +217,68 @@ ECF854E7
 Cybermorph (World) (Beta) (1993-08-23).j64
 9EB389F9
 
+Cybernoid - The Fighting Machine (World) (Aftermarket) (Unl).j64
+99659AD1
+
+Cybernoid II - The Revenge (World) (Aftermarket) (Unl).j64
+0B1EF479
+
+Dance Dance Xirius - Space Party (World) (Aftermarket) (Unl).j64
+40DBBC53
+
+Darius+ (World) (Aftermarket) (Unl).j64
+6192124A
+
+Dark Guardian Episode 1 - Unknown Enemy (World) (Proto) (Aftermarket) (Unl).j64
+9DD9247C
+
+Dazed VS (World) (Demo) (Aftermarket) (Unl).j64
+F704507C
+
 Defender 2000 (World).j64
 27594C6A
 
 Defender 2000 (World) (Beta).j64
 952D07F0
 
+Degz (World) (Aftermarket) (Unl).j64
+F8415194
+
+Diam Jag (World) (Aftermarket) (Unl).j64
+472ABF3A
+
+Dino Rage (World) (Proto 2) (Aftermarket) (Unl).j64
+22D7B666
+
+Dino Rage (World) (Proto 1) (Grid) (Aftermarket) (Unl).j64
+120A7F16
+
+Dino Rage (World) (Proto 1) (Jungle) (Aftermarket) (Unl).j64
+9186BA0D
+
+Do the Same (World) (Aftermarket) (Unl).j64
+E71A3570
+
+Do the Same (World) (Aftermarket) (Unl) (Alt).j64
+A8187BEE
+
+Doger (World) (Aftermarket) (Unl).j64
+3644BFE3
+
 Doom (World).j64
 5E2CDBC0
 
+Doom 2 (World) (AC 2011) (Aftermarket) (Unl).j64
+FDE46E44
+
+Doom 2 (World) (AC 98) (E-JagFest 2010) (Aftermarket) (Unl).j64
+74A9511B
+
 Double Dragon V - The Shadow Falls (World).j64
 348E6449
+
+Downfall (World) (Aftermarket) (Unl).j64
+ACFCEABD
 
 Dragon - The Bruce Lee Story (World).j64
 8FEA5AB0
@@ -103,8 +289,44 @@ A14F94AB
 Dragon - The Bruce Lee Story (World) (Beta) (1994-10-06).j64
 83C6ACC0
 
+Dragon Breed (World) (Aftermarket) (Unl).j64
+833F95B5
+
+DragonKeep (World) (v1.01) (Aftermarket) (Unl).j64
+507C724A
+
+Duckie Egg (World) (Aftermarket) (Unl).j64
+AC7241F3
+
+Elansar (World) (Demo) (Aftermarket) (Unl).j64
+64ECE2B1
+
+Escape from the Planet of the Robot Monsters (World) (Aftermarket) (Unl).j64
+1A2A0A07
+
 Evolution - Dino Dudes (World).j64
 0EC5369D
+
+Expressway (World) (Aftermarket) (Unl).j64
+58DDF24A
+
+Fallen Angels (World) (Aftermarket) (Unl).j64
+4884CAA7
+
+Fallen Angels (World) (Aftermarket) (Unl) (Alt).j64
+AF21539E
+
+Fantasy World Dizzy (World) (Aftermarket) (Unl) (Alt).j64
+C05B915C
+
+Fantasy World Dizzy (World) (Aftermarket) (Unl).j64
+CD8AC3CD
+
+Fast Food 64 (World) (v1.4b) (Aftermarket) (Unl).j64
+62BCC567
+
+Fernandez Must Die (World) (Aftermarket) (Unl).j64
+A14FA995
 
 Fever Pitch Soccer (World) (En,Fr,De,Es,It).j64
 3615AF6A
@@ -124,11 +346,71 @@ DE55DCC7
 Flip Out! (World).j64
 892BC67C
 
+Flying Shark (World) (Aftermarket) (Unl).j64
+6E6A96B6
+
+Frog Feast (World) (Aftermarket).j64
+6038E95F
+
+Frog Feast (World) (Demo) (Aftermarket) (Unl).j64
+0BB68730
+
+Frogger (World) (Demo) (Aftermarket) (Unl).j64
+4A3DAA9E
+
+Full Circle - Rocketeer (World) (Demo) (Aftermarket) (Unl).j64
+BDDD9FF3
+
+Gauntlet II (World) (Aftermarket) (Unl).j64
+E2CA43AB
+
+Gem Race (World) (Aftermarket) (Unl).j64
+F0C77EB0
+
+Gem Race (World) (Aftermarket) (Unl) (Alt).j64
+ED2BC94B
+
+Ghouls'n Ghosts (World) (Aftermarket) (Unl).j64
+2D05BFE6
+
+Golden Axe (World) (Atari ST) (Aftermarket) (Unl).j64
+1BAC90C1
+
+Golden Axe (World) (AMIGA) (Aftermarket) (Unl).j64
+324E0AF6
+
+Gravitic Mines (World) (Demo) (Aftermarket) (Unl).j64
+23362B22
+
+Gryzzles (World) (Aftermarket) (Unl).j64
+082B4479
+
+Half Circle - 8biteer (World) (Aftermarket) (Unl).j64
+081755F6
+
+HalMock FurBall - Sink or Swim (World) (Demo) (Aftermarket) (Unl).j64
+F042AC49
+
 High Voltage C Maze (USA) (Demo).j64
 25F79B1F
 
+HMS RaptoR (World) (v1.1) (U-235) (Aftermarket) (Unl).j64
+F2A3C58A
+
+HMS RaptoR (World) (Aftermarket) (Unl).j64
+E7E8FBBB
+
+HMS RaptoR (World) (Demo) (Aftermarket) (Unl).j64
+B6C5C660
+
+Hook (World) (Aftermarket) (Unl).j64
+A3347C23
+
 Hover Strike (World).j64
 4899628F
+
+Hyper Force (World) (Aftermarket) (Unl).j64
+F0360DB3
 
 I-War (USA, Europe).j64
 97EB4651
@@ -136,11 +418,17 @@ I-War (USA, Europe).j64
 I-War (USA, Europe) (Beta) (1995-10-20).j64
 5BFFA5AC
 
+Impulse X (World) (Aftermarket) (Unl).j64
+0366E6F4
+
 International Sensible Soccer (World).j64
 5A101212
 
 Iron Soldier (World).j64
 08F15576
+
+Iron Soldier 2 (World) (Aftermarket) (Unl).j64
+D6C19E34
 
 Jack Nicklaus Cyber Golf (USA) (v0.02) (Proto) (1994-07-04).j64
 7733F701
@@ -151,8 +439,50 @@ E20F0EEF
 Jack Nicklaus Cyber Golf (USA) (v0.04) (Demo) (1995-01-16).j64
 BE5E9EF1
 
+JagMania (World) (Aftermarket) (Unl).j64
+34AAD48B
+
+Jagmatch (World) (Aftermarket) (Unl).j64
+D35135CA
+
 Jaguar Hockey Legends 2013 (World) (Unl).j64
 7E90046E
+
+Jaguar Tetris (World) (Aftermarket) (Unl).j64
+AFC47ACB
+
+JagWorm (World) (Proto) (Aftermarket) (Unl).j64
+DD90DB6F
+
+JagZombies (World) (2017-11-18) (Demo) (Aftermarket) (Unl).j64
+80D1DC1A
+
+JagZombies (World) (2017-11-11) (Demo) (Aftermarket) (Unl).j64
+948EF4DB
+
+Jalaga (World) (GemTos 2023) (Aftermarket) (Unl).j64
+C8C942A3
+
+Jet Set Willy (World) (Aftermarket) (Unl).j64
+80DF77CF
+
+Jetpac (World) (Aftermarket) (Unl).j64
+812B79CA
+
+Joust (World) (Aftermarket) (Unl).j64
+5F00A265
+
+Jumping at Shadows (World) (Demo) (Portland Retro Gaming Expo 2022) (Aftermarket).j64
+5D56BD77
+
+Jumping Jack (World) (Demo) (Aftermarket) (Unl).j64
+73BBD799
+
+Jungle Jag (World) (Aftermarket) (Unl).j64
+D58DB1C3
+
+Kaboom (World) (Demo) (Aftermarket) (Unl).j64
+6F17033F
 
 Kasumi Ninja (World).j64
 0957A072
@@ -163,17 +493,77 @@ EE9529EE
 Kasumi Ninja (World) (v0.29) (Beta) (1994-05-24).j64
 3D6C5D44
 
+Klax (World) (Aftermarket) (Unl).j64
+D7B486D9
+
+Kobayashi Maru (World) (Aftermarket) (Unl).j64
+CB675CB3
+
+Kobayashi Maru Final (World) (Digital) (Aftermarket) (Unl).j64
+AF180DB0
+
+Lady Bug(ged) (World) (Demo) (Aftermarket) (Unl).j64
+26F7FE1A
+
+Last Strike (World) (Demo) (Aftermarket) (Unl).j64
+FB98CDC0
+
+Mad Bodies (World) (Proto) (2009-01-17) (Aftermarket) (Unl).j64
+A7E01FEF
+
+Martian Attack (World) (Aftermarket) (Unl).j64
+6A66A507
+
+Martian Attack (World) (JagCode 2007) (Aftermarket) (Unl).j64
+8431522D
+
+Maxx, The (World) (Aftermarket) (Unl).j64
+B32F3350
+
+Midnight Resistance (World) (Aftermarket) (Unl).j64
+16679070
+
 Missile Command 3D (World).j64
 DA9C4162
 
 Missile Command VR (World) (Beta) (1995-07-05).j64
 5810CADB
 
+Moon Patrol (World) (Aftermarket) (Unl).j64
+15AFC82D
+
+Mr. Heli (World) (Aftermarket) (Unl).j64
+7DDA7097
+
+Native (World) (Proto) (Aftermarket) (Unl).j64
+A71BEB1C
+
 NBA Jam - Tournament Edition (USA, Europe).j64
 0AC83D77
 
+Ninja Mission (World) (Aftermarket) (Unl).j64
+F9AF7741
+
+Not Outrun (World) (Demo) (Aftermarket) (Unl).j64
+87200535
+
+Operation Thunderbolt (World) (Aftermarket) (Unl).j64
+068AE135
+
+Orion_'s Jaguar Collection (World) (Aftermarket) (Unl).j64
+62424620
+
+OSMOZYS (World) (Demo) (Aftermarket) (Unl).j64
+807E453C
+
 Painter (World) (1995-12-29) (Unl).j64
 5F9EF174
+
+Passing Shot (World) (Aftermarket) (Unl).j64
+71DFA885
+
+Phase Zero (World) (Aftermarket) (Unl).j64
+7168B143
 
 Pinball Fantasies (World).j64
 5CFF14AB
@@ -187,11 +577,41 @@ Plucky Duck in Hollywood Hijinks (USA) (Proto) (1994-10-28).j64
 Power Drive Rally (World).j64
 1660F070
 
+Project One (World) (Demo) (Aftermarket) (Unl).j64
+A00C6406
+
+Project Two (World) (Demo) (Aftermarket) (Unl).j64
+71DC803A
+
+Project Two (World) (Demo) (Aftermarket) (Unl) (Alt).j64
+9F4A748D
+
+Project W (World) (Demo) (Aftermarket) (Unl).j64
+76FFB475
+
+Protector (World) (Aftermarket) (Unl).j64
+1A20C5C4
+
+Protector - Special Edition (World) (Aftermarket) (Unl).j64
+A56D0798
+
+Quest, The (World) (Aftermarket) (Unl).j64
+325A1138
+
+R-Type (World) (Aftermarket) (Unl).j64
+5AB37D25
+
+R-Type II (World) (Aftermarket) (Unl).j64
+F3669BD8
+
 Raiden (World).j64
 0509C85E
 
 Raiden (World) (Rev A).j64
 31812799
+
+Rampage (World) (Aftermarket) (Unl).j64
+111FCB1C
 
 Rayman (World).j64
 A9F8A00E
@@ -202,14 +622,104 @@ Rayman (World) (Beta 2).j64
 Rayman (World) (Beta 1).j64
 92743C49
 
+Rebooteroids (World) (RC1.1) (Aftermarket) (Unl).j64
+E86A1088
+
+Rebooteroids (World) (Proto) (Aftermarket) (Unl).j64
+77FD8CE4
+
+Rick Dangerous (World) (Aftermarket) (Unl).j64
+A6005B38
+
+Rick Dangerous 2 (World) (Aftermarket) (Unl).j64
+C3C9F3D7
+
+Rings (World) (RC3) (Aftermarket) (Unl).j64
+E3E790B4
+
+Rocks Off! (World) (Aftermarket) (Unl).j64
+1F86F163
+
 Ruiner Pinball (USA, Europe).j64
 5B6BB205
+
+S.p.a.c.e. (World) (Demo 1) (Aftermarket) (Unl).j64
+90D831FC
+
+S.p.a.c.e. (World) (Demo 2) (Aftermarket) (Unl).j64
+37E0E6D2
+
+ScatoLOGIC Music Engine Demo (World) (Demo) (Aftermarket) (Unl).j64
+76EE9BB7
+
+Shoot'em up (World) (Aftermarket) (Unl).j64
+445D709C
+
+Shoot'em up 3D (World) (Demo) (Aftermarket) (Unl).j64
+AA5319A1
 
 SkyCopter II (USA) (Proto).j64
 4F464FA5
 
+Skyhammer (World) (Aftermarket) (Unl).j64
+3C044941
+
+Slam Racer (World) (Proto 2) (Aftermarket) (Unl).j64
+EF21492D
+
+Slam Racer (World) (Proto 1) (Aftermarket) (Unl).j64
+91C3FF61
+
+SlipStream (World) (Proto) (Aftermarket) (Unl).j64
+066B837F
+
+Snowman, The (World) (Aftermarket) (Unl).j64
+E71B4296
+
+Soccer Kid (World) (Beta) (Aftermarket) (Unl).j64
+42A13EC5
+
+Soccer Kid (World) (Aftermarket) (Unl).j64
+732FFAB6
+
+Solomon's Key (World) (Aftermarket) (Unl).j64
+0123B455
+
+Space War 2000 (World) (Aftermarket) (Unl).j64
+D821F5EB
+
 Speedster II (USA) (Proto).j64
 F7CFE6E6
+
+Star Wars (World) (Aftermarket) (Unl).j64
+A83C6D6E
+
+Star Wars - Return of the Jedi (World) (Aftermarket) (Unl).j64
+2021FFEC
+
+Star Wars - The Empire Strikes Back (World) (Aftermarket) (Unl).j64
+231338F0
+
+STNICCC 2000 (World) (2018-11-21) (Demo) (Aftermarket) (Unl).j64
+AF6DECE5
+
+STNICCC 2000 (World) (2018-11-20) (Demo) (Aftermarket) (Unl).j64
+38ABEDA6
+
+STNICCC 2000 (2nd) (World) (2022-06-08) (Demo) (Aftermarket) (Unl).j64
+A7E652BB
+
+STNICCC 2000 (2nd) (World) (2022-06-01) (Demo) (Aftermarket) (Unl).j64
+DC8E36FA
+
+STNICCC 2000 (2nd) (World) (2022-05-31) (Demo) (Aftermarket) (Unl).j64
+809AFEB5
+
+Strider (World) (Aftermarket) (Unl).j64
+4ED753F3
+
+Stunt Car Racer (World) (Aftermarket) (Unl).j64
+9F4732C1
 
 Super Burnout (World).j64
 6F8B2547
@@ -217,8 +727,17 @@ Super Burnout (World).j64
 Supercross 3D (USA, Europe).j64
 EC22F572
 
+SuperFly DX (World) (v1.1) (Aftermarket) (Unl).j64
+504C1D73
+
+SuperFly DX (World) (Aftermarket) (Unl).j64
+80134347
+
 Syndicate (World).j64
 58272540
+
+Teenage Mutant Hero Turtles (World) (Aftermarket) (Unl).j64
+59709B62
 
 Tempest 2000 (World).j64
 6B2B95AD
@@ -234,6 +753,9 @@ Theme Park (World).j64
 
 Tiny Toon Adventures (USA) (Proto).j64
 F4ACBB04
+
+Total Carnage (World) (Aftermarket) (Unl).j64
+C654681B
 
 Total Carnage (USA) (Beta).j64
 8F80EDCF
@@ -252,6 +774,24 @@ Trevor McFur in the Crescent Galaxy (World).j64
 
 Troy Aikman NFL Football (World).j64
 38A130ED
+
+Tube (World) (Aftermarket) (Unl).j64
+80DAF2BA
+
+Tube - Second Edition (World) (Aftermarket) (Unl).j64
+7C658563
+
+Tube2020 (World) (RC2) (Aftermarket) (Unl).j64
+F4852DD6
+
+Tube2020 (World) (RC1) (Aftermarket) (Unl).j64
+1551B09C
+
+uFly (World) (v0.991) (Demo) (Aftermarket) (Unl).j64
+9D299BA1
+
+uFly (World) (0.99) (Demo) (Aftermarket) (Unl).j64
+9ECB4116
 
 Ultimate Brain Games (USA) (Proto).j64
 8FB54827
@@ -273,6 +813,12 @@ White Men Can't Jump (USA, Europe).j64
 
 Wolfenstein 3D (World).j64
 E91BD644
+
+Worms (World) (Aftermarket) (Unl).j64
+6EB774EB
+
+Zero 5 (World) (Aftermarket) (Unl).j64
+61C7EEC0
 
 Zero 5 (USA) (Beta).j64
 691B54BA

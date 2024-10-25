@@ -301,6 +301,9 @@ DragonKeep (World) (v1.01) (Aftermarket) (Unl).j64
 Duckie Egg (World) (Aftermarket) (Unl).j64
 AC7241F3
 
+Early Years CD Collection, The (World) (Aftermarket) (Unl).j64
+83EEA7D5
+
 Elansar (World) (Demo) (Aftermarket) (Unl).j64
 64ECE2B1
 
@@ -636,6 +639,9 @@ E86A1088
 
 Rebooteroids (World) (Proto) (Aftermarket) (Unl).j64
 77FD8CE4
+
+Remute - There is Hope (World) (Aftermarket) (Unl).j64
+B28BF522
 
 Rick Dangerous (World) (Aftermarket) (Unl).j64
 A6005B38

@@ -301,6 +301,9 @@ DragonKeep (World) (v1.01) (Aftermarket) (Unl).j64
 Duckie Egg (World) (Aftermarket) (Unl).j64
 AC7241F3
 
+Early Years CD Collection, The (World) (Aftermarket) (Unl)
+83eea7d5
+
 Elansar (World) (Demo) (Aftermarket) (Unl).j64
 64ECE2B1
 

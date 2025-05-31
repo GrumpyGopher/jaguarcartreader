@@ -1,5 +1,7 @@
 # jaguarcartreader
 
+**Note:** I'm no longer maintaining this repo for the most up to date version checkout the current version maintained by PsychoFox11 at https://github.com/PsychoFox11/jaguarcartreader
+
 Modification of @sakman55 Standalone Atari Jaguar Cart Reader<br/>
 Adds support for renaming game automatically when reading rom.<br/>
 
